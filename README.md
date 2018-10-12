@@ -1,2 +1,5 @@
-# ws-v5-stubs
-Updated stubs of Web Services v5 ready to use
+# payzen-ws-stubs
+
+![](https://img.shields.io/maven-central/v/com.profesorfalken/payzen-ws-stubs.svg)
+
+Stubs for Payzen Web Services v5
