@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.payzen</groupId>
 	<artifactId>ws-v5-stubs</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<name>WebServices v5 Stubs</name>
 	<description>Generated stubs ready to use in Web Services v5</description>
 	<url>https://github.com/payzen/ws-v5-stubs</url>

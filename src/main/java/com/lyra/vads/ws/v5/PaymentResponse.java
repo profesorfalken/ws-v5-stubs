@@ -35,6 +35,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="nsu" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="paymentError" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="wallet" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="preTaxAmount" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="taxRate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="taxAmount" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -61,7 +64,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "paymentType",
     "nsu",
     "paymentError",
-    "wallet"
+    "wallet",
+    "preTaxAmount",
+    "taxRate",
+    "taxAmount"
 })
 public class PaymentResponse {
 
@@ -84,6 +90,9 @@ public class PaymentResponse {
     protected String nsu;
     protected Integer paymentError;
     protected String wallet;
+    protected Long preTaxAmount;
+    protected String taxRate;
+    protected Long taxAmount;
 
     /**
      * Obtient la valeur de la propriété transactionId.
@@ -491,6 +500,78 @@ public class PaymentResponse {
      */
     public void setWallet(String value) {
         this.wallet = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété preTaxAmount.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getPreTaxAmount() {
+        return preTaxAmount;
+    }
+
+    /**
+     * Définit la valeur de la propriété preTaxAmount.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setPreTaxAmount(Long value) {
+        this.preTaxAmount = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété taxRate.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTaxRate() {
+        return taxRate;
+    }
+
+    /**
+     * Définit la valeur de la propriété taxRate.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTaxRate(String value) {
+        this.taxRate = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété taxAmount.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getTaxAmount() {
+        return taxAmount;
+    }
+
+    /**
+     * Définit la valeur de la propriété taxAmount.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setTaxAmount(Long value) {
+        this.taxAmount = value;
     }
 
 }

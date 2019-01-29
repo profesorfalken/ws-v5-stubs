@@ -28,6 +28,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="acquirerTransientData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="firstInstallmentDelay" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="overridePaymentCinematic" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="taxRate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="taxAmount" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,7 +49,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "paymentOptionCode",
     "acquirerTransientData",
     "firstInstallmentDelay",
-    "overridePaymentCinematic"
+    "overridePaymentCinematic",
+    "taxRate",
+    "taxAmount"
 })
 public class PaymentRequest {
 
@@ -62,6 +66,8 @@ public class PaymentRequest {
     protected String acquirerTransientData;
     protected Integer firstInstallmentDelay;
     protected String overridePaymentCinematic;
+    protected String taxRate;
+    protected Long taxAmount;
 
     /**
      * Obtient la valeur de la propriété transactionId.
@@ -301,6 +307,54 @@ public class PaymentRequest {
      */
     public void setOverridePaymentCinematic(String value) {
         this.overridePaymentCinematic = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété taxRate.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTaxRate() {
+        return taxRate;
+    }
+
+    /**
+     * Définit la valeur de la propriété taxRate.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTaxRate(String value) {
+        this.taxRate = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété taxAmount.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getTaxAmount() {
+        return taxAmount;
+    }
+
+    /**
+     * Définit la valeur de la propriété taxAmount.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setTaxAmount(Long value) {
+        this.taxAmount = value;
     }
 
 }

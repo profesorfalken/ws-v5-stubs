@@ -24,6 +24,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="number" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="result" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="cardBalanceInfo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,7 +40,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "currency",
     "date",
     "number",
-    "result"
+    "result",
+    "cardBalanceInfo"
 })
 public class AuthorizationResponse {
 
@@ -50,6 +52,7 @@ public class AuthorizationResponse {
     protected XMLGregorianCalendar date;
     protected String number;
     protected Integer result;
+    protected String cardBalanceInfo;
 
     /**
      * Obtient la valeur de la propriété mode.
@@ -193,6 +196,30 @@ public class AuthorizationResponse {
      */
     public void setResult(Integer value) {
         this.result = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété cardBalanceInfo.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCardBalanceInfo() {
+        return cardBalanceInfo;
+    }
+
+    /**
+     * Définit la valeur de la propriété cardBalanceInfo.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCardBalanceInfo(String value) {
+        this.cardBalanceInfo = value;
     }
 
 }
